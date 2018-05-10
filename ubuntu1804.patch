@@ -1,0 +1,27 @@
+diff --git a/README.md b/README.md
+index 7cae577..696b429 100644
+--- a/README.md
++++ b/README.md
+@@ -12,7 +12,7 @@ Also requires
+ [CMake](https://cmake.org/) build system.  
+ 
+ On Ubuntu you can run the following command:  
+-> sudo apt-get install cmake zlib1g-dev libboost-system-dev libboost-program-options-dev libpthread-stubs0-dev libfuse-dev  
++> sudo apt-get install cmake zlib1g-dev libboost-system-dev libboost-program-options-dev libpthread-stubs0-dev libfuse-dev  libudev-dev
+ 
+ ## Build steps
+ 
+diff --git a/pCloudCC/lib/pclsync/pcompat.h b/pCloudCC/lib/pclsync/pcompat.h
+index b5fd219..f5915a6 100644
+--- a/pCloudCC/lib/pclsync/pcompat.h
++++ b/pCloudCC/lib/pclsync/pcompat.h
+@@ -92,7 +92,8 @@
+ 
+ #define P_OS_ID 7
+ 
+-#define _GNU_SOURCE
++//#define _GNU_SOURCE
++#undef __has_builtin
+ 
+ #else
+ 

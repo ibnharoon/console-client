@@ -92,7 +92,8 @@
 
 #define P_OS_ID 7
 
-#define _GNU_SOURCE
+//#define _GNU_SOURCE
+#undef __has_builtin
 
 #else
 
